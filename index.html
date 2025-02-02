@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+    </style>
+    <title>Kalkulator Penukar Unit Panjang</title>
+</head>
+<div style="border-style: solid; border-color: #333;border-radius: 25px; box-shadow: 5px 10px #dbdbdb;padding: 20px ; ">
+    <div class="calculator-container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h1 class="display-4 text-center mb-3">Kalkulator Penukar Unit Panjang</h1>
+                <div id="output">
+                    <div class="card mb-2" style="background: #FF914D;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Milimeter (mm)</h4>
+                            <input id="mmOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan mm...">
+                            <div id="Output"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-2" style="background: #E4B880;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Sentimeter (cm)</h4>
+                            <input id="cmOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan cm...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #ACB591;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Meter (m)</h4>
+                            <input id="mOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan Tan...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #5B8D80;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Kilometer (km)</h4>
+                            <input id="kmOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan km...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #50706C;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Inci (inch)</h4>
+                            <input id="inchOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan inci...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #304A3F;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Kaki (ft)</h4>
+                            <input id="ftOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan kaki...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #1e3129;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Ela (yard)</h4>
+                            <input id="yardOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan ela...">
+                        </div>
+                    </div>
+                    <div class="card mb-2" style="background: #0f1d17;">
+                        <div class="card-block">
+                            <h4 style="color:white;">Batu (mile)</h4>
+                            <input id="mileOutput" type="number" class="form-control form-control-lg" placeholder="Masukkan batu...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin:9px ;text-align: center; padding: 3px; ">
+        
+        <a href="PakcikEngineer"><img src="https://pakcikengineer.com/wp-content/uploads/2020/09/cropped-Pakcik_engineer_logo_and_tagline-removebg-preview.png"
+            style="width: 20%;" alt="Italian Trulli"></a>
+            <p style="font-size:10px; color: rgb(179, 179, 179);">Penukar Unit Panjang V1.00<br></p>
+            <p style="font-size:10px; color: rgb(179, 179, 179);"><b>Penafian:</b><br> PakcikEngineer.com tidak bertanggungjawab atas kerosakan atau kerugian disebabakan penggunaan alat ini.
+                Sila hubungi kami jika anda percaya terdapat kesalahan yang ketara. Penukar unit panjang ini hanyalah anggaran hampir tepat. <br></p>
+            </div>
+
+    <script>
+
+        document.getElementById('mmOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let mm = e.target.value;
+            document.getElementById('cmOutput').value=mm/10;
+            document.getElementById('mOutput').value=mm/1000;
+            document.getElementById('kmOutput').value=mm/1E6;
+            document.getElementById('inchOutput').value=mm/(25.4);
+            document.getElementById('ftOutput').value=mm/(304.8);
+            document.getElementById('yardOutput').value=mm/(914.4);
+            document.getElementById('mileOutput').value=mm/(1609344);
+        });
+
+        document.getElementById('cmOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let cm = e.target.value;
+            document.getElementById('mmOutput').value=cm*10;
+            document.getElementById('mOutput').value=cm/100;
+            document.getElementById('kmOutput').value=cm/1E5;
+            document.getElementById('inchOutput').value=cm/(2.54);
+            document.getElementById('ftOutput').value=cm/(30.48);
+            document.getElementById('yardOutput').value=cm/(91.44);
+            document.getElementById('mileOutput').value=cm/(160934.4);
+        });
+        
+        </script>
+    
+    </div>
+</html>
