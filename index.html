@@ -14,7 +14,7 @@
     <div class="calculator-container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <h1 class="display-4 text-center mb-3">Kalkulator Penukar Unit Panjang</h1>
+                <h2 style="font-size: 40px;" class="display-4 text-center mb-3">Kalkulator Penukar Unit Panjang</h2>
                 <div id="output">
                     <div class="card mb-2" style="background: #FF914D;">
                         <div class="card-block">
@@ -76,8 +76,8 @@
         <a href="PakcikEngineer"><img src="https://pakcikengineer.com/wp-content/uploads/2020/09/cropped-Pakcik_engineer_logo_and_tagline-removebg-preview.png"
             style="width: 20%;" alt="Italian Trulli"></a>
             <p style="font-size:10px; color: rgb(179, 179, 179);">Penukar Unit Panjang V1.00<br></p>
-            <p style="font-size:10px; color: rgb(179, 179, 179);"><b>Penafian:</b><br> PakcikEngineer.com tidak bertanggungjawab atas kerosakan atau kerugian disebabakan penggunaan alat ini.
-                Sila hubungi kami jika anda percaya terdapat kesalahan yang ketara. Penukar unit panjang ini hanyalah anggaran hampir tepat. <br></p>
+            <p style="font-size:10px; color: rgb(179, 179, 179);"><b>Penafian:</b><br> PakcikEngineer.com tidak bertanggungjawab atas kerosakan atau kerugian disebabakan penggunaan alat ini. Penukar unit panjang ini hanyalah anggaran hampir tepat. 
+                Sila hubungi kami jika anda percaya terdapat kesalahan yang ketara.<br></p>
             </div>
 
     <script>
@@ -104,6 +104,78 @@
             document.getElementById('ftOutput').value=cm/(30.48);
             document.getElementById('yardOutput').value=cm/(91.44);
             document.getElementById('mileOutput').value=cm/(160934.4);
+        });
+
+        document.getElementById('mOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let m = e.target.value;
+            document.getElementById('mmOutput').value=m*1000;
+            document.getElementById('cmOutput').value=m*100;
+            document.getElementById('kmOutput').value=m/1000;
+            document.getElementById('inchOutput').value=m/(0.0254);
+            document.getElementById('ftOutput').value=m*(3.280839895);
+            document.getElementById('yardOutput').value=m/(0.9144);
+            document.getElementById('mileOutput').value=m/(1609.344);
+        });
+
+        document.getElementById('kmOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let km = e.target.value;
+            document.getElementById('mmOutput').value=km*1E6;
+            document.getElementById('cmOutput').value=km*1E5;
+            document.getElementById('mOutput').value=km*1000;
+            document.getElementById('inchOutput').value=km*39370.1;
+            document.getElementById('ftOutput').value=km*3280.84;
+            document.getElementById('yardOutput').value=km/(0.0009144);
+            document.getElementById('mileOutput').value=km/(1.609344);
+        });
+
+        document.getElementById('inchOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let inch = e.target.value;
+            document.getElementById('mmOutput').value=inch*25.4;
+            document.getElementById('cmOutput').value=inch*2.54;
+            document.getElementById('mOutput').value=inch*(0.0254);
+            document.getElementById('kmOutput').value=inch/(39370.1);
+            document.getElementById('ftOutput').value=inch/(12);
+            document.getElementById('yardOutput').value=inch/(36);
+            document.getElementById('mileOutput').value=inch/(63360);
+        });
+
+        document.getElementById('ftOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let ft = e.target.value;
+            document.getElementById('mmOutput').value=ft*304.8;
+            document.getElementById('cmOutput').value=ft*30.48;
+            document.getElementById('mOutput').value=ft*(0.3048);
+            document.getElementById('kmOutput').value=ft/(3280.84);
+            document.getElementById('inchOutput').value=ft*(12);
+            document.getElementById('yardOutput').value=ft/(3);
+            document.getElementById('mileOutput').value=ft/(5280);
+        });
+
+        document.getElementById('yardOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let yd = e.target.value;
+            document.getElementById('mmOutput').value=yd*914.4;
+            document.getElementById('cmOutput').value=yd*91.44;
+            document.getElementById('mOutput').value=yd*(0.9144);
+            document.getElementById('kmOutput').value=yd*(0.0009144);
+            document.getElementById('inchOutput').value=yd*(36);
+            document.getElementById('ftOutput').value=yd*(3);
+            document.getElementById('mileOutput').value=yd/(1760);
+        });
+
+        document.getElementById('mileOutput').addEventListener('input', function (e) {
+            document.getElementById('output').style.visibility='visible';
+            let mi = e.target.value;
+            document.getElementById('mmOutput').value=mi*1609344;
+            document.getElementById('cmOutput').value=mi*160934.4;
+            document.getElementById('mOutput').value=mi*(1609.344);
+            document.getElementById('kmOutput').value=mi*(1.609344);
+            document.getElementById('inchOutput').value=mi*(63360);
+            document.getElementById('ftOutput').value=mi*(5280);
+            document.getElementById('yardOutput').value=mi*(1760);
         });
         
         </script>
